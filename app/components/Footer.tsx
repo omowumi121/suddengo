@@ -1,60 +1,69 @@
+"use client";
+
 import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="py-4 px-4 bg-amber-500">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+    <footer className="px-4 py-6 bg-[#FE5722] text-white">
+      <div className="max-w-6xl mx-auto">
 
-     <div className="flex gap-1 text-2xl">
-          <a
-            href="Tiktok"
-            className="transition transform hover:scale-110 hover:text-pink-500"
-            title="Tiktok"
-          >
-            <SiTiktok />
-          </a>
-          <a
-            href="Instagram"
-            className="transition transform hover:scale-110 hover:text-purple-500"
-            title="Instagram"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="Twitter"
-            className="transition transform hover:scale-110 hover:text-blue-500"
-            title="Twitter"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="Linkedin"
-            className="transition transform hover:scale-110 hover:text-blue-700"
-            title="Linkedin"
-          >
-            <FaLinkedinIn />
-          </a>
+        {/* TOP ROW */}
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+
+          {/* SOCIALS */}
+          <div className="flex gap-4 text-xl">
+            <a href="#" className="transition hover:scale-110">
+              <SiTiktok />
+            </a>
+            <a href="#" className="transition hover:scale-110">
+              <FaInstagram />
+            </a>
+            <a href="#" className="transition hover:scale-110">
+              <FaTwitter />
+            </a>
+            <a href="#" className="transition hover:scale-110">
+              <FaLinkedinIn />
+            </a>
+          </div>
+
+          {/* STORE BUTTONS */}
+          <div className="flex gap-3">
+            <Image
+              src="/images/google-play.webp"
+              alt="Google Play"
+              width={140}
+              height={40}
+              className="w-auto h-auto"
+            />
+            <Image
+              src="/images/app-store.webp"
+              alt="App Store"
+              width={140}
+              height={40}
+              className="w-auto h-auto"
+            />
+          </div>
+
         </div>
 
-        <div className="text-sm md:text-right">
-            <div className="flex flex-col items-end gap-4">
-        <div className="w-32">
-         <Image
-             src="/images/footer.png"
-             alt="SuddenGo Logo"
-             width={200}
-            height={120}
-            className="h-auto w-full"
-              />
-          </div>
-            </div>
-            <p className="text-sm">
-            Email: <a href="mailto:Info@suddengo.com">Info@suddengo.com</a><br/>
-            Contact: <a href="tel:+2347087960006">+234 708 796 0006</a>
+        {/* TEXT */}
+        <div className="mt-3 text-xs text-right text-white/90">
+          <p>
+            Email:{" "}
+            <a href="mailto:info@suddengo.com" className="underline">
+              info@suddengo.com
+            </a>{" "}
+            | Contact:{" "}
+            <a href="tel:+2347087960006" className="underline">
+              +234 708 796 0006
+            </a>
           </p>
-          © All Rights Reserved. 2025, SuddenGo
+
+          <p className="mt-1">
+            © All Rights Reserved. 2025, SuddenGo
+          </p>
         </div>
 
       </div>

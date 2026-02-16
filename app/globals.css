@@ -5,8 +5,8 @@
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF4ED;
+  --foreground: #FFF4ED;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #FFF4ED;
     --foreground: #ededed;
     --color-background: var(--background);
     --color-foreground: var(--foreground);

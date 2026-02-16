@@ -5,94 +5,110 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {Autoplay} from "swiper/modules";
 
 
+import "swiper/css";
+import features1 from "@/public/images/features1.png";
+import features2 from "@/public/images/features2.png";
+import features3 from "@/public/images/features3.png";
+import features4 from "@/public/images/features4.png";
+import { title } from "process";
+
 
 const features = [
     {
-        title:"Micro-Loans & Financial Access",
-        text: "Unlock quick,flexible micro-loans through SuddenGo's in-app loan system.",
-        image: "/images/features1.png"
+        id: "01",
+        title: "Micro-Loans & Financial Access",
+        text: "Unlock quick, flexible micro-loans directly inside the app",
+        image: features1,
     },
-     {
-        title:"Trusted Riders, Safe Service",
-        text: "Every delivery is handled by verifield riders for your safety and peace of mind.",
-        image: "/images/features2.png"
+    {
+        id: "02",
+        title: "Trusted Riders, Safe Service",
+        text: "verified riders ensure every delivery is secure and reliable.",
+        image: features2
     },
-     {
-        title:"Affordable & Transparent Pricing",
-        text: "Enjoy fair delivery fees with no hidden charges. what you see is what you pay.",
-        image: "/images/features3.png"
+    {
+        id: "03",
+        title: "Affordable & Transparent Pricing",
+        text: "No hidden charges. what you see is what you pay.",
+        image: features3
     },
-     {
-        title:"Fast Delivery You Can Rely On",
-        text: "Get your food and essentials delivered in minutes- no delays, no stress.",
-        image: "/images/features4.png"
-    },
+    {
+       id: "04",
+       title: "Fast Delivery You Can Rely On",
+       text: "Get your essentials delivered in minutes - stress free.",
+       image: features4, 
+    }
+]
 
-];
 
 
 export default function Features() {
-    
-    return(
-        <section className="py-20 px-4 bg-amber-100 dark:bg-amber-700">
+      return(
+        <section className="px-4 py-20 dark:bg-amber-700 ">
           
-          <div className="max-w-6xl mx-auto text-left space-y-4">
-            <h2 className="text-4xl md:text-4xl font-bold text-amber-700 dark:text-white">
+          <div className="max-w-6xl mx-auto space-y-4 text-left">
+            <h2 className="text-3xl font-bold md:text-4xl text-amber-700 dark:text-white">
                Why People Love
             </h2>
 
-            <p className=" text-4xl md:text-4xl font-bold text-amber-700 dark:text-white">
+            <p className="text-4xl font-bold md:text-4xl text-amber-700 dark:text-white">
                 Using SuddenGo
             </p>
           </div>
 
           <Swiper
-            modules={[Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1.2}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-            }}
-             breakpoints={{
-                640: {slidesPerView: 2 },
-                768: { slidesPerView: 3 },
-                1024: { slidesPerView: 4 },
-             }}
-             className="max-w-6xl mx-auto mt-12"
-             >
-                {features.map((feature,i) => (
-                    <SwiperSlide key={i}>
-                         <FeatureCard {...feature} />
-                    </SwiperSlide>
-                ))}
+  modules={[Autoplay]}
+  spaceBetween={20}
+  slidesPerView="auto"
+  loop
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  className="mt-12"
+>
+  {features.map((feature) => (
+    <SwiperSlide
+      key={feature.id}
+      className="w-[320px] md:w-130"
+    >
+      <div className="grid grid-cols-1 overflow-hidden bg-white shadow-lg md:grid-cols-2 rounded-3xl">
+        
+        {/* LEFT */}
+        <div className="relative flex flex-col justify-center p-8 text-white bg-amber-600">
+          <div className="absolute flex items-center justify-center w-10 h-10 text-sm font-semibold border border-white rounded-full top-4 left-4">
+            {feature.id}
+          </div>
 
-          </Swiper>
+          <div className="mt-10">
+            <h3 className="text-xl font-bold">
+              {feature.title}
+            </h3>
+
+            <p className="mt-3 text-sm text-white/80">
+              {feature.text}
+            </p>
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="h-55">
+          <Image
+            src={feature.image}
+            alt={feature.title}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
         </section>
 
     );
 }
 
-function FeatureCard({title, text, image}: {title:string; text:string; image:string}){
-    return (
-        <div className="p-4 rounded-2xl bg-white dark:bg-gray-900 shadow-sm hover:shadow-md transition">
-          
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-left">
-            {title}
-          </h3>
 
-          <p className="">
-            {text}
-          </p>
-
-          <div className="mb-4 flex justify-center">
-            <Image
-                src={image}
-                alt={title}
-                width={200}
-                height={200}/>
-
-          </div>
-        </div>
-    )
-}
