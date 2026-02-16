@@ -9,10 +9,9 @@ export default function Footer() {
     <footer className="px-4 py-6 bg-[#FE5722] text-white">
       <div className="max-w-6xl mx-auto">
 
-        {/* TOP ROW */}
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
 
-          {/* SOCIALS */}
+          
           <div className="flex gap-4 text-xl">
             <a href="#" className="transition hover:scale-110">
               <SiTiktok />
@@ -28,7 +27,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* STORE BUTTONS */}
           <div className="flex gap-3">
             <Image
               src="/images/google-play.webp"
@@ -48,7 +46,7 @@ export default function Footer() {
 
         </div>
 
-        {/* TEXT */}
+        
         <div className="mt-3 text-xs text-right text-white/90">
           <p>
             Email:{" "}

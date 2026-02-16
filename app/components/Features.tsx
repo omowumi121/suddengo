@@ -74,7 +74,7 @@ export default function Features() {
     >
       <div className="grid grid-cols-1 overflow-hidden bg-white shadow-lg md:grid-cols-2 rounded-3xl">
         
-        {/* LEFT */}
+        
         <div className="relative flex flex-col justify-center p-8 text-white bg-amber-600">
           <div className="absolute flex items-center justify-center w-10 h-10 text-sm font-semibold border border-white rounded-full top-4 left-4">
             {feature.id}
@@ -91,7 +91,7 @@ export default function Features() {
           </div>
         </div>
 
-        {/* RIGHT */}
+        
         <div className="h-55">
           <Image
             src={feature.image}
