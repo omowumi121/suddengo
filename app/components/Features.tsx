@@ -59,8 +59,8 @@ export default function Features() {
           <Swiper
   modules={[Autoplay]}
   spaceBetween={20}
-  slidesPerView="auto"
-  loop
+  slidesPerView={1.1}
+  loop 
   autoplay={{
     delay: 2000,
     disableOnInteraction: false,
@@ -70,7 +70,7 @@ export default function Features() {
   {features.map((feature) => (
     <SwiperSlide
       key={feature.id}
-      className="w-[320px] md:w-130"
+      className="w-75 md:w-130"
     >
       <div className="grid grid-cols-1 overflow-hidden bg-white shadow-lg md:grid-cols-2 rounded-3xl">
         
@@ -92,7 +92,7 @@ export default function Features() {
         </div>
 
         
-        <div className="h-55">
+        <div className="h-[350px] overflow-hidden rounded-2xl">
           <Image
             src={feature.image}
             alt={feature.title}

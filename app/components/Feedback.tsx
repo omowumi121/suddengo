@@ -1,54 +1,89 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Feedback() {
   return (
-    <section className="py-20 px-4">
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="px-4 py-20"
+    >
       <div className="max-w-6xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-2">
 
-        <div className="grid md:grid-cols-2 gap-8">
-
-        
-          <div className="relative rounded-3xl overflow-hidden h-105 md:h-130">
-
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-3xl h-[420px] md:h-[520px]"
+          >
             <Image
               src="/images/feedback1.jpg"
-              alt="smiling client"
+              alt="Smiling client"
               width={600}
               height={700}
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
 
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
-
-              <h2 className="text-white text-4xl md:text-3xl font-bold mb-70">
+          
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              viewport={{ once: true }}
+              className="absolute inset-0 flex flex-col justify-end p-6 bg-black/40"
+            >
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: true }}
+                className="mb-6 text-3xl font-bold text-white md:text-4xl"
+              >
                 Food, Groceries & Essentials Delivered the Easy Way.
-              </h2>
+              </motion.h2>
 
-             <div className="w-28">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.55 }}
+                viewport={{ once: true }}
+                className="w-32"
+              >
                 <Image
                   src="/images/google-play.png"
                   alt="Google Play"
                   width={200}
-                  height={200}
-                  className="h-auto"
+                  height={80}
+                  className="w-full h-auto transition hover:scale-105"
                 />
-              </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
-            </div>
-          </div>
-
-          <div className="rounded-3xl overflow-hidden bg-slate-100">
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="overflow-hidden rounded-3xl h-[420px] md:h-[520px]"
+          >
             <Image
               src="/images/feedback2.jpg"
               alt="App Preview"
               width={600}
               height={700}
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
-          </div>
+          </motion.div>
 
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
