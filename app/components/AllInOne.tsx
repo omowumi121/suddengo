@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-
-import download from "@/public/images/download.png";
+import { FaGooglePlay, FaApple } from "react-icons/fa";
+import Image from "next/image";
 import allinone from "@/public/images/allinone.png";
 
 export default function AllInOne() {
@@ -17,10 +16,9 @@ export default function AllInOne() {
     >
       <div className="max-w-4xl p-4 mx-auto">
         <div className="bg-[#FFF4ED] rounded-2xl p-6 md:p-10 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906] leading-[1.1] mb-2">
-          
-          
+
+          {/* LEFT TEXT + BUTTONS */}
           <div className="lg:w-1/2">
-            
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -43,23 +41,40 @@ export default function AllInOne() {
               powerful super-app.
             </motion.p>
 
+            {/* BUTTONS */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex flex-wrap gap-2"
+              className="flex flex-col gap-4 sm:flex-row"
             >
-              <a href="#">
-                <Image
-                  src={download}
-                  alt="Download App"
-                  className="w-auto transition h-14 hover:scale-105"
-                />
-              </a>
+              {/* Google Play */}
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center gap-3 px-6 py-3 transition-all duration-300 bg-white shadow-lg cursor-pointer rounded-2xl hover:bg-gray-100 hover:scale-105 hover:shadow-xl active:scale-95 group"
+              >
+                <FaGooglePlay className="text-[#fe5722] w-6 h-6 transition-transform group-hover:scale-110" />
+                <div className="text-[#440906] text-sm font-bold whitespace-nowrap">
+                  Download on Google Play
+                </div>
+              </motion.div>
+
+              {/* App Store */}
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center gap-3 px-6 py-3 transition-all duration-300 bg-white shadow-lg cursor-pointer rounded-2xl hover:bg-gray-100 hover:scale-105 hover:shadow-xl active:scale-95 group"
+              >
+                <FaApple className="text-[#fe5722] w-6 h-6 transition-transform group-hover:scale-110" />
+                <div className="text-[#440906] text-sm font-bold whitespace-nowrap">
+                  Download on App Store
+                </div>
+              </motion.div>
             </motion.div>
 
-            
+            {/* LOGO / S Letter */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -85,6 +100,7 @@ export default function AllInOne() {
             </motion.div>
           </div>
 
+          {/* RIGHT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,6 +124,7 @@ export default function AllInOne() {
               />
             </motion.div>
           </motion.div>
+
         </div>
       </div>
     </motion.section>
