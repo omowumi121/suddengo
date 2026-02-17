@@ -17,7 +17,7 @@ export default function AllInOne() {
       <div className="max-w-4xl p-4 mx-auto">
         <div className="bg-[#FFF4ED] rounded-2xl p-6 md:p-10 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906] leading-[1.1] mb-2">
 
-          {/* LEFT TEXT + BUTTONS */}
+          
           <div className="lg:w-1/2">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ export default function AllInOne() {
               powerful super-app.
             </motion.p>
 
-            {/* BUTTONS */}
+            
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function AllInOne() {
               viewport={{ once: true }}
               className="flex flex-col gap-4 sm:flex-row"
             >
-              {/* Google Play */}
+              
               <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.97 }}
@@ -61,7 +61,7 @@ export default function AllInOne() {
                 </div>
               </motion.div>
 
-              {/* App Store */}
+          
               <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.97 }}
@@ -74,7 +74,7 @@ export default function AllInOne() {
               </motion.div>
             </motion.div>
 
-            {/* LOGO / S Letter */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ export default function AllInOne() {
             </motion.div>
           </div>
 
-          {/* RIGHT IMAGE */}
+          
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}

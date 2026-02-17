@@ -13,7 +13,7 @@ export default function Hero() {
     >
       <div className="grid items-center w-full max-w-6xl gap-10 mx-auto md:grid-cols-2">
 
-        {/* LEFT TEXT + BUTTONS */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,14 +41,14 @@ export default function Hero() {
             rewards, and unlock micro-loans when you need them.
           </motion.p>
 
-          {/* BUTTONS */}
+          
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="flex flex-col gap-4 mt-2 sm:flex-row"
           >
-            {/* Google Play */}
+            
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.97 }}
@@ -60,7 +60,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* App Store */}
+            
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.97 }}
@@ -74,7 +74,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+      
             <Image
               src={iphone}
               alt="SuddenGo App"

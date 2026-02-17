@@ -15,22 +15,22 @@ export default function Feedback() {
       <div className="max-w-6xl mx-auto">
         <div className="grid gap-8 md:grid-cols-2">
 
-          {/* LEFT IMAGE */}
+          
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-[3/4]"
+            className="relative overflow-hidden rounded-3xl aspect-4/5 md:aspect-3/4"
           >
-            {/* Background Image */}
+          
             <img
               src="/images/feedback1.jpg"
               alt="Smiling client"
               className="object-cover w-full h-full"
             />
 
-            {/* Overlay with text + buttons at TOP */}
+            
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -38,7 +38,7 @@ export default function Feedback() {
               viewport={{ once: true }}
               className="absolute inset-0 flex flex-col items-start gap-6 p-6 pt-10 bg-black/30"
             >
-              {/* Headline */}
+              
               <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function Feedback() {
                 Food, Groceries & Essentials Delivered the Easy Way.
               </motion.h2>
 
-              {/* Buttons */}
+              
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function Feedback() {
                 viewport={{ once: true }}
                 className="flex gap-4"
               >
-                {/* Google Play */}
+            
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.97 }}
@@ -69,7 +69,7 @@ export default function Feedback() {
                   </div>
                 </motion.div>
 
-                {/* App Store */}
+                
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.97 }}
@@ -84,13 +84,13 @@ export default function Feedback() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT IMAGE */}
+          
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-[3/4]"
+            className="relative overflow-hidden rounded-3xl aspect-4/5 md:aspect-3/4"
           >
             <img
               src="/images/feedback2.jpg"

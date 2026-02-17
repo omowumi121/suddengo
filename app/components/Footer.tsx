@@ -25,7 +25,6 @@ const item = {
 export default function Footer() {
   return (
     <motion.footer
-      variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -33,10 +32,10 @@ export default function Footer() {
     >
       <div className="max-w-5xl px-4 mt-8 mx-30 sm:px-6 lg:px-8">
 
-        {/* MAIN CONTAINER */}
+      
         <div className="flex flex-col items-center justify-between gap-4 lg:flex-row lg:items-start">
 
-          {/* SOCIAL LINKS */}
+          
           <motion.div
             variants={item}
             className="grid w-full grid-cols-2 gap-x-8 gap-y-6 sm:gap-x-12 sm:gap-y-8 sm:w-auto"
@@ -54,7 +53,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-3 transition-opacity hover:opacity-80"
               >
-                {/* ICON LOGIC */}
+              
                 {social.icon && (
                   <span className="text-xl font-bold sm:text-2xl">{social.icon}</span>
                 )}
@@ -80,7 +79,7 @@ export default function Footer() {
             ))}
           </motion.div>
 
-          {/* DOWNLOAD BUTTONS */}
+          
           <motion.div
             variants={item}
             className="flex flex-col items-center w-full gap-4 lg:items-end lg:w-auto"
@@ -114,7 +113,7 @@ export default function Footer() {
 
         </div>
 
-        {/* CONTACT INFO */}
+        
         <motion.div
           variants={item}
           className="w-full mt-2 text-center lg:text-right"
