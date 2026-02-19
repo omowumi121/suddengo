@@ -61,9 +61,9 @@ export default function Feedback() {
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.97 }}
-                  className="flex items-center gap-3 px-6 py-3 transition-all duration-300 bg-white shadow-lg cursor-pointer rounded-2xl hover:bg-gray-100 hover:scale-105 hover:shadow-xl active:scale-95 group"
+                  className="flex items-center gap-3 px-3 py-3 transition-all duration-300 bg-white rounded-none shadow-lg cursor-pointer hover:bg-gray-100 hover:scale-105 hover:shadow-xl active:scale-95 group"
                 >
-                  <FaGooglePlay className="text-[#fe5722] w-6 h-6 transition-transform group-hover:scale-110" />
+                  <FaGooglePlay className="text-[#440906] w-3 h-3 transition-transform group-hover:scale-110" />
                   <div className="text-[#440906] text-sm font-bold whitespace-nowrap">
                     Download on Google Play
                   </div>
@@ -73,9 +73,9 @@ export default function Feedback() {
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.97 }}
-                  className="flex items-center gap-3 px-6 py-3 transition-all duration-300 bg-white shadow-lg cursor-pointer rounded-2xl hover:bg-gray-100 hover:scale-105 hover:shadow-xl active:scale-95 group"
+                  className="flex items-center gap-3 px-3 py-3 transition-all duration-300 bg-white rounded-none shadow-lg cursor-pointer hover:bg-gray-100 hover:scale-105 hover:shadow-xl active:scale-95 group"
                 >
-                  <FaApple className="text-[#fe5722] w-6 h-6 transition-transform group-hover:scale-110" />
+                  <FaApple className="text-[#06442d] w-3 h-3 transition-transform group-hover:scale-110" />
                   <div className="text-[#440906] text-sm font-bold whitespace-nowrap">
                     Download on App Store
                   </div>

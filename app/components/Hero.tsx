@@ -17,7 +17,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center text-white md:text-left md:ml-20 w-lg"
         >
-          <h1 className="text-4xl font-bold text-left mt-30 sm:text-3xl md:text-center md:font-semibold md:text-4xl">
+          <h1 className="mt-20 text-4xl font-bold text-left  sm:text-3xl md:text-center md:font-semibold md:text-4xl">
             Your Delivery & 
             Financial Lifestyle 
             App — All In One Place
@@ -37,7 +37,7 @@ export default function Hero() {
               </span>
               </div>
             
-             <div  className="flex gap-3 px-6 py-3 py-4 bg-white rounded-sm shadow-lg cursor-pointer items-centerm md:ml-16 md:py-2 md:px-2">
+             <div  className="flex gap-3 px-6 py-3 bg-white rounded-sm shadow-lg cursor-pointer items-centerm md:ml-16 md:py-2 md:px-2">
               <FaApple className="w-3 h-4 text-[#440906]" />
               <span className="text-[#ab7674] text-xs font-semibold whitespace-nowrap">
                 Download on App Store

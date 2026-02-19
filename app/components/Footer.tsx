@@ -7,6 +7,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
+// Motion variants
 const container = {
   hidden: { opacity: 0, y: 20 },
   show: {
@@ -28,7 +29,6 @@ const item = {
 export default function Footer() {
   return (
     <motion.footer
-      variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -36,18 +36,18 @@ export default function Footer() {
     >
       <div className="flex flex-col items-center max-w-6xl gap-6 px-4 py-8 mx-auto">
 
-  
+        {/* SOCIAL LINKS */}
         <motion.div
           variants={item}
-          className="gap-6 text-sm colitems-center sm:gap-8"
+          className="flex items-center gap-6 text-sm sm:gap-8"
         >
-          <FooterLink label="X" href="#" />
+          <FooterLink label="X/twitter" href="#" />
           <FooterLink label="Instagram" href="#" icon={<FaInstagram />} />
           <FooterLink label="TikTok" href="#" icon={<FaTiktok />} />
           <FooterLink label="LinkedIn" href="#" icon={<FaLinkedinIn />} />
         </motion.div>
 
-        
+        {/* CONTACT LINE */}
         <motion.div
           variants={item}
           className="text-sm font-medium text-center"
@@ -55,7 +55,7 @@ export default function Footer() {
           Email: Info@suddengo.com | Contact: +234 708 796 0006
         </motion.div>
 
-      
+        {/* COPYRIGHT */}
         <motion.div
           variants={item}
           className="text-sm text-center opacity-90"
@@ -68,7 +68,7 @@ export default function Footer() {
   );
 }
 
-
+// simple link for footer
 function FooterLink({ label, href, icon }: any) {
   return (
     <a
