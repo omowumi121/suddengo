@@ -12,10 +12,10 @@ export default function AllInOne() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative z-10 px-4 -mt-32 md:-mt-48 lg:-mt-36 sm:px-6 lg:px-8"
+      className="relative z-10 px-4 -mt-20 md:-mt-28"
     >
-      <div className="max-w-4xl p-4 mx-auto">
-        <div className="bg-[#FFF4ED] rounded-2xl p-6 md:p-10 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906] leading-[1.1] mb-2">
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-[#FFF4ED] rounded-2xl p-6 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-10 border border-[#440906]">
 
           
           <div className="lg:w-1/2">

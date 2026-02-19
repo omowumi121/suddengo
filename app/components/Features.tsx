@@ -70,8 +70,7 @@ export default function Features() {
   {features.map((feature) => (
     <SwiperSlide
       key={feature.id}
-      className="w-75 md:w-130"
-    >
+      >
       <div className="grid grid-cols-1 overflow-hidden bg-white shadow-lg md:grid-cols-2 rounded-3xl">
         
         
