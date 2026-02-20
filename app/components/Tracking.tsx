@@ -11,46 +11,55 @@ export default function Tracking() {
   const features = [
     {
       title: "Access Quick Micro-Loans Instantly",
-      desc: "Unlock flexible micro-loans based on your app activity and referrals. build your score as you order, earn badges, and climb the leaderboard",
+      desc: "Unlock flexible micro-loans based on your app activity and referrals. Build your score as you order, earn badges, and climb the leaderboard.",
       image: "/images/preview1.png",
     },
     {
       title: "Earn Badges & Climb the Leaderboard",
-      desc: "Get rewarded for every order you make. Unlock badges, track your progress and compete with friends as you enjoy fast, reliable deliveries.",
+      desc: "Get rewarded for every order you make. Unlock badges, track your progress, and compete with friends.",
       image: "/images/preview2.png",
     },
     {
       title: "Track Your Orders in Real Time",
-      desc: "Know exactly where your rider is at every moment. from pickup to drop-off, SuddenGo gives you live delivery updates so you stay informed.",
+      desc: "Know exactly where your rider is at every moment. From pickup to drop-off, SuddenGo gives live updates.",
       image: "/images/preview3.png",
     },
     {
-      title: "Refers Friends & Earn Rewards",
-      desc: "Share your unique referral code and get instant bonuses when your friends sign up and place their first order. More invites= more rewards.",
+      title: "Refer Friends & Earn Rewards",
+      desc: "Share your referral code and earn instant bonuses when friends sign up and place their first order.",
       image: "/images/preview4.png",
     },
   ];
 
   return (
-    <section className="px-4 py-20 text-white bg-[#0d0d1a]">
+    <section className="px-2 py-4 text-white bg-[#0d0d1a]">
 
-      {/* HEADER */}
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="pt-12 pb-30 mr-30 text-2xl font-stretch-50% sm:text-3xl md:text-sm">
-          Explore Powerful Features Built for Your <br /> <span className="mr-35"> Daily Convenience</span>
-        </h2>
-        <p className="text-sm mb-30 md:text-xs ml-50 text-white/70 sm:text-base">
-          SuddenGo is more than delivery — it’s a complete lifestyle <br /> and  financial super-app.Enjoy real-time tracking, secure <br /> payments, referral rewards nd access to in-app micro- <br />loans designed for everyday Convenience.
-        </p>
+      
+      <div className="max-w-6xl pt-8 mx-auto">
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+          
+          <h2 className="text-xl font-bold leading-tight sm:text-3xl md:text-sm md:max-w-xl">
+            Explore Powerful Features <br />
+            Built for Your Daily Convenience
+          </h2>
+
+          
+          <p className="text-sm text-white/70 sm:text-base md:text-right md:max-w-xl">
+            SuddenGo is more than delivery — it’s a complete lifestyle and financial
+            super-app. Enjoy real-time tracking, secure payments, referral rewards,
+            and access to in-app micro-loans designed for everyday convenience.
+          </p>
+
+        </div>
       </div>
 
-      {/* CAROUSEL */}
       <div className="max-w-6xl mx-auto mt-3">
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
           loop
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           breakpoints={{
             0: { slidesPerView: 1 },
@@ -62,29 +71,30 @@ export default function Tracking() {
           className="pb-20"
         >
           {features.map((feat, i) => (
-            <SwiperSlide key={i} className="w-[280pxs]">
-  <div className="w-full max-w-sm mx-auto overflow-hidden shadow-sm rounded-2xl bg-gradient-to-b from-red-600 to-orange-500">
+            <SwiperSlide key={i} className="w-[280px]">
 
-    <h3 className="px-4 pt-10 text-3xl font-bold leading-tight text-center">
-      {feat.title}
-    </h3>
+              <div className="w-full p-6 shadow-sm bg-gradient-to-b from-red-600 to-orange-500 rounded-3xl">
 
-    <p className="px-4 pt-4 mt-2 text-lg text-center text-white/90">
-      {feat.desc}
-    </p>
+                <h3 className="px-4 pt-10 text-lg font-bold leading-tight text-center sm:text-xl">
+                  {feat.title}
+                </h3>
 
-    <div className="relative w-full mt-30 aspect-[1.15/1] pt-8">
-      <Image
-        src={feat.image}
-        alt={feat.title}
-        fill
-        className="w-full"
-      />
-    </div>
+                <p className="mt-2 text-sm text-center text-white/90">
+                  {feat.desc}
+                </p>
 
-  </div>
-</SwiperSlide>
+                <div className="relative w-full mt-30 aspect-[1.15/1]">
+                  <Image
+                    src={feat.image}
+                    alt={feat.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
 
+              </div>
+
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>
