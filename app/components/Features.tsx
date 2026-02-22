@@ -59,8 +59,8 @@ export default function Features() {
           <Swiper
   modules={[Autoplay]}
   spaceBetween={20}
-  slidesPerView={1.1}
-  loop 
+  slidesPerView={1.5}
+  loop
   autoplay={{
     delay: 2000,
     disableOnInteraction: false,
@@ -68,30 +68,46 @@ export default function Features() {
   className="mt-12"
 >
   {features.map((feature) => (
-    <SwiperSlide
-      key={feature.id}
-      >
-      <div className="grid grid-cols-1 overflow-hidden bg-white shadow-lg md:grid-cols-2 rounded-3xl">
+    <SwiperSlide key={feature.id}>
+      
+      {/* Parent Container */}
+      <div className="relative h-[400px]  w-[700px] rounded-3xl  ml-20">
         
-        
-        <div className="relative flex flex-col justify-center p-8 text-white bg-amber-600">
-          <div className="absolute flex items-center justify-center w-10 h-10 text-sm font-semibold border border-white rounded-full top-4 left-4">
+        {/* Text Card */}
+        <div className="relative z-10 flex flex-col justify-center p-8 md:p-12 text-white bg-amber-600 rounded-3xl 
+                        w-full md:w-[50%] h-auto md:h-full">
+          
+          {/* Circle Number */}
+          <div className="absolute flex items-center justify-center w-10 h-10 text-sm font-semibold border border-white rounded-full top-20 left-7 ">
             {feature.id}
           </div>
 
-          <div className="mt-10">
-            <h3 className="text-xl font-bold">
+          <div className="mt-55">
+            <h3 className="text-xl font-bold md:text-2xl">
               {feature.title}
             </h3>
 
-            <p className="mt-3 text-sm text-white/80">
+            <p className="mt-4 text-sm md:text-base text-white/80">
               {feature.text}
             </p>
           </div>
         </div>
 
-        
-        <div className="h-[350px] overflow-hidden rounded-2xl">
+        {/* Image */}
+        <div className="
+            relative 
+            mt-6 
+            h-[300px] 
+            rounded-3xl 
+            overflow-hidden
+
+            md:absolute 
+            md:top-0 
+            md:right-0 
+            md:mt-0 
+            md:h-full 
+            md:w-[60%]
+          ">
           <Image
             src={feature.image}
             alt={feature.title}
@@ -100,6 +116,7 @@ export default function Features() {
         </div>
 
       </div>
+
     </SwiperSlide>
   ))}
 </Swiper>

@@ -5,74 +5,76 @@ import {
   FaInstagram,
   FaTiktok,
   FaLinkedinIn,
-} from "react-icons/fa";
-
-const container = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.1,
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
+  FaXTwitter,
+  FaGooglePlay,
+  FaApple,
+} from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <motion.footer
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="bg-[#fe5722] text-white"
-    >
-      <div className="flex flex-col items-center max-w-6xl gap-6 px-4 py-8 mx-auto">
+    <footer className="bg-[#fe5722] text-white">
+      <div className="max-w-6xl px-4 py-10 mx-auto">
 
-        <motion.div
-          variants={item}
-          className="flex items-center gap-6 text-sm sm:gap-8"
-        >
-          <FooterLink label="X/twitter" href="#" />
-          <FooterLink label="Instagram" href="#" icon={<FaInstagram />} />
-          <FooterLink label="TikTok" href="#" icon={<FaTiktok />} />
-          <FooterLink label="LinkedIn" href="#" icon={<FaLinkedinIn />} />
-        </motion.div>
+        {/* Main Top Section */}
+        <div className="flex flex-col items-center gap-10 md:flex-row md:justify-between md:items-start">
 
-        <motion.div
-          variants={item}
-          className="text-sm font-medium text-center"
-        >
-          Email: Info@suddengo.com | Contact: +234 708 796 0006
-        </motion.div>
+          {/* LEFT - Social Links */}
+         <div className="grid grid-cols-1 gap-4 text-base md:ml-50 md:gap-10 sm:grid-cols-2 md:grid-cols-2 justify-items-center md:justify-items-start">
+  <FooterLink icon={<FaXTwitter className="w-6 h-6" />} label="X / Twitter" />
+  <FooterLink icon={<FaInstagram className="w-6 h-6" />} label="Instagram" />
+  <FooterLink icon={<FaTiktok className="w-6 h-6" />} label="Tiktok" />
+  <FooterLink icon={<FaLinkedinIn className="w-6 h-6" />} label="LinkedIn" />
+</div>
 
-        <motion.div
-          variants={item}
-          className="text-sm text-center opacity-90"
-        >
-          © All Rights Reserved. 2025, SuddenGo
-        </motion.div>
+          {/* RIGHT - Download + Contact */}
+          <div className="flex flex-col items-center gap-6 text-center md:items-end md:text-right">
 
+            {/* Download Buttons */}
+            <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-end md:mr-10 ">
+              <DownloadBtn
+                icon={<FaGooglePlay className="text-[#fe5722]" />}
+                text="Download on Google Play"
+              />
+              <DownloadBtn
+                icon={<FaApple className="text-black" />}
+                text="Download on App Store"
+              />
+            </div>
+
+            {/* Contact */}
+            <div className="text-sm md:mr-32">
+              Email: Info@suddengo.com | Contact: +234 708 796 0006
+            </div>
+
+            {/* Copyright */}
+            <div className="text-sm opacity-90 md:mr-60">
+              © All Rights Reserved. 2025, SuddenGo
+            </div>
+
+          </div>
+
+        </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
 
-
-function FooterLink({ label, href, icon }: any) {
+function FooterLink({ icon, label }: any) {
   return (
-    <a
-      href={href}
-      className="flex items-center gap-1 transition-opacity hover:opacity-80"
-    >
-      {icon ? icon : null}
+    <div className="flex items-center gap-2 cursor-pointer hover:opacity-80">
+      {icon}
       <span>{label}</span>
-    </a>
+    </div>
+  );
+}
+
+function DownloadBtn({ icon, text }: any) {
+  return (
+    <div className="flex items-center gap-3 px-5 py-3 transition bg-white shadow-md cursor-pointer rounded-xl hover:scale-105">
+      {icon}
+      <span className="text-[#440906] text-sm font-semibold whitespace-nowrap">
+        {text}
+      </span>
+    </div>
   );
 }

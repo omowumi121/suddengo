@@ -35,4 +35,12 @@ body {
 .swiper-pagination-bullet-active {
   background: #fe5722;
 }
+.swiper-pagination-bullet {
+  background: black !important;
+  opacity: 0.5;
+}
 
+.swiper-pagination-bullet-active {
+  background: black !important;
+  opacity: 1;
+}

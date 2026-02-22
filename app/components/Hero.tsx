@@ -59,7 +59,7 @@ export default function Hero() {
           <Image
             src={iphone}
             alt="SuddenGo App"
-            className="w-64 mt-10 sm:w-80 md:w-96 drop-shadow-2xl"
+            className="w-64 mt-20 mr-15 sm:w-80 md:w-96 drop-shadow-2xl"
             priority
           />
         </motion.div>

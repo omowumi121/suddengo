@@ -14,8 +14,8 @@ export default function AllInOne() {
       viewport={{ once: true }}
       className="relative z-10 px-4 -mt-32 md:-mt-20 lg:-mt-20 sm:px-6 lg:px-8"
     >
-      <div className="max-w-3xl mx-auto">
-        <div className="bg-[#FFF4ED] rounded-2xl md:rounded-[4rem] p-6 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906] relative overflow-hidden ">
+      <div className="mx-auto max-w-10xl">
+        <div className="bg-[#FFF4ED] w-full max-w-5xl mx-auto rounded-2xl md:rounded-[1rem] p-6 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906] relative overflow-hidden ">
 
           
           <div className="lg:w-1/2">
